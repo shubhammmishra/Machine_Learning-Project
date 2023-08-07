@@ -13,7 +13,7 @@ def index():
         logging.info(housing.error_message)
         logging.info("we are testing logging module")
 
-    return "Starting Machine Learning Project Journey"
+    return "Starting Machine Learning Project Journey in ai with time"
 logging.info("this is our logging info")
 
 
