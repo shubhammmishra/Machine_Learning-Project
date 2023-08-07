@@ -10,14 +10,14 @@ class HousingException(Exception):
         self.error_message = HousingException.get_detailed_error_message(error_message = error_message,
                                                                          error_detail = error_detail)
         
-@staticmethod
-def get_detailed_error_message(error_message : Exception, error_detail : sys) ->str:
+    @staticmethod
+    def get_detailed_error_message(error_message : Exception, error_detail : sys) ->str:
 
-    _,_,exec_tb = error_detail.exc_info()
-    linenumber = exec_tb.tb_frame.f_lineno
-    filename = exec_tb.tb_frame.f_code.co_filename
-    error_message = f" Error occured in strip :[{filename}] at line number : [{linenumber}] error message : [{error_message}]"
-    return error_message
+        _,_,exec_tb = error_detail.exc_info()
+        linenumber = exec_tb.tb_frame.f_lineno
+        filename = exec_tb.tb_frame.f_code.co_filename
+        error_message = f" Error occured in strip :[{filename}] at line number : [{linenumber}] error message : [{error_message}]"
+        return error_message
 
 def __str__(self):
     return self.error_message
